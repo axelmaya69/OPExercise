@@ -37,5 +37,7 @@ public class Main {
         akainu.impregnarHaki();
         tralfgar.impregnarHaki();
 
+        
+
     }
 }
