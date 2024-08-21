@@ -1,9 +1,12 @@
 package clasesOP;
 
 import clasesAbstractas.Marin;
+import interfaces.IHakiDeArmadura;
+import interfaces.IHakiDelRey;
 import interfaces.ILogia;
 
-public class Akainu extends Marin implements ILogia {
+public class Akainu extends Marin implements ILogia, IHakiDeArmadura,
+        IHakiDelRey {
     public Akainu(String nombre, String apellido) {
         super(nombre, apellido);
     }
@@ -47,5 +50,18 @@ public class Akainu extends Marin implements ILogia {
     public void atacar() {
         System.out.println("Soy "+getNombre()+" "+getApellido()+" y ataco" +
                 "con la lava que sale de mi cuerpo" );
+    }
+
+    @Override
+    public void impregnarHaki() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " y uso haki para protegerme" );
+    }
+
+    @Override
+    public void imponerVoluntad() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " y uso haki para imponerles mi voluntad a esos gusanos" +
+                "" );
     }
 }

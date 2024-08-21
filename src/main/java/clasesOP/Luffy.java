@@ -1,9 +1,13 @@
 package clasesOP;
 
 import clasesAbstractas.Pirata;
+import interfaces.IHakiDeArmadura;
+import interfaces.IHakiDeObservacion;
+import interfaces.IHakiDelRey;
 import interfaces.IZoan;
 
-public class Luffy extends Pirata implements IZoan {
+public class Luffy extends Pirata implements IZoan,
+        IHakiDelRey, IHakiDeArmadura, IHakiDeObservacion {
 
 
     public Luffy(String nombre, String apellido) {
@@ -37,5 +41,23 @@ public class Luffy extends Pirata implements IZoan {
     public void atacar() {
         System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
                 "ataco con mi cuerpo de goma" );
+    }
+
+    @Override
+    public void impregnarHaki() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " y uso Haki en mi gear fourth" );
+    }
+
+    @Override
+    public void visualizarFuturo() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " uso Haki de observacion al pelear con alguien" );
+    }
+
+    @Override
+    public void imponerVoluntad() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " use haki para desmayar a 50 mil gyojins" );
     }
 }

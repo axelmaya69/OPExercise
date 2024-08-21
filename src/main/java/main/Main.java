@@ -25,9 +25,17 @@ public class Main {
         luffy.hablar();
                 akainu.hablar();
                 tralfgar.hablar();
-
+        System.out.println();
         luffy.buscarElOnePiece();
                 akainu.detenerPiratas();
                 tralfgar.buscarElOnePiece();
+        System.out.println();
+        luffy.visualizarFuturo();
+        luffy.imponerVoluntad();
+        luffy.impregnarHaki();
+        akainu.imponerVoluntad();
+        akainu.impregnarHaki();
+        tralfgar.impregnarHaki();
+
     }
 }

@@ -1,9 +1,10 @@
 package clasesOP;
 
 import clasesAbstractas.Pirata;
+import interfaces.IHakiDeArmadura;
 import interfaces.IParamencia;
 
-public class Tralfgar extends Pirata implements IParamencia {
+public class Tralfgar extends Pirata implements IParamencia , IHakiDeArmadura {
     public Tralfgar(String nombre, String apellido) {
         super(nombre, apellido);
     }
@@ -36,5 +37,12 @@ public class Tralfgar extends Pirata implements IParamencia {
     public void atacar() {
         System.out.println("Soy "+getNombre()+" "+getApellido()+" y te ataco con mi" +
                 "yasho letal en mi espada" );
+    }
+
+    @Override
+    public void impregnarHaki() {
+        System.out.println("Soy "+getNombre()+" "+getApellido()+" y " +
+                " y uso haki para protegerme de los ataques de barbanegra y sus " +
+                "aliados" );
     }
 }
